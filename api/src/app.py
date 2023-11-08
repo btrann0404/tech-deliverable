@@ -56,10 +56,10 @@ def post_message(name: str = Form(), message: str = Form()) -> JSONResponse:
     return JSONResponse(content=quote, status_code=status.HTTP_201_CREATED)
 
 @app.get("/quote")
-def get_quotes():
+async def get_quotes(skip: int = 0, limit: int = 10):
     """
-    Retrieve all quotes from the database.
+    Retrieve all quotes from the database with pagination.
     """
-    return database["quotes"]
+    return database["quotes"][skip : skip + limit]
 
 # TODO: add another API route with a query parameter to retrieve quotes based on max age
