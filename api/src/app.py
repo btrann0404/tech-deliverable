@@ -43,7 +43,7 @@ def on_shutdown() -> None:
     
 
 @app.post("/quote")
-def post_message(name: str = Form(), message: str = Form()) -> RedirectResponse:
+def post_message(name: str = Form(), message: str = Form()) -> JSONResponse:
     """
     Process a user submitting a new quote.
     You should not modify this function except for the return value.
@@ -51,7 +51,7 @@ def post_message(name: str = Form(), message: str = Form()) -> RedirectResponse:
     now = datetime.now().replace(microsecond=0)
 
     quote = Quote(name=name, message=message, time=now.isoformat())
-    database["quotes"].insert(0, quote)
+    database["quotes"].insert(0, quote) #only changed so new quotes will be on top for users
 
     return JSONResponse(content=quote, status_code=status.HTTP_201_CREATED)
 

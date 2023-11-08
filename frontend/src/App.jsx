@@ -28,6 +28,7 @@ function App() {
 		.then(response => {
 		  if (response.ok) {
 			console.log('Quote added!');
+			event.target.reset();
 			return fetch('http://localhost:8000/quote');
 		  } else {
 			return response.text().then(text => Promise.reject(text));
@@ -44,7 +45,6 @@ function App() {
 		})
 		.catch(error => {
 		  console.error('Error posting or fetching quotes:', error);
-
 		});
 	  };
 	  
@@ -59,7 +59,7 @@ function App() {
 				<label htmlFor="input-name">Name</label>
 				<input type="text" name="name" id="input-name" required />
 				<label htmlFor="input-message">Quote</label>
-				<input type="text" name="message" id="input-message" required />
+				<input type="text" name="message" id="input-message" required/>
 				<button type="submit">Submit</button>
 			</form>
 
