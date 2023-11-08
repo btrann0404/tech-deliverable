@@ -2,11 +2,21 @@ from datetime import datetime
 from typing import TypedDict
 
 from fastapi import FastAPI, Form, status
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from fastapi.responses import RedirectResponse
 
 from services.database import JSONDatabase
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"], 
+)
 
 
 class Quote(TypedDict):
@@ -30,7 +40,7 @@ def on_startup() -> None:
 def on_shutdown() -> None:
     """Close database when stopping API server."""
     database.close()
-
+    
 
 @app.post("/quote")
 def post_message(name: str = Form(), message: str = Form()) -> RedirectResponse:
@@ -41,10 +51,15 @@ def post_message(name: str = Form(), message: str = Form()) -> RedirectResponse:
     now = datetime.now().replace(microsecond=0)
 
     quote = Quote(name=name, message=message, time=now.isoformat())
-    database["quotes"].append(quote)
+    database["quotes"].insert(0, quote)
 
-    # You may modify the return value as needed to support other functionality
-    return RedirectResponse("/", status.HTTP_303_SEE_OTHER)
+    return JSONResponse(content=quote, status_code=status.HTTP_201_CREATED)
 
+@app.get("/quote")
+def get_quotes():
+    """
+    Retrieve all quotes from the database.
+    """
+    return database["quotes"]
 
 # TODO: add another API route with a query parameter to retrieve quotes based on max age
