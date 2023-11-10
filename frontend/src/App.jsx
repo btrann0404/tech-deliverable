@@ -7,8 +7,6 @@ function App() {
   const [skip, setSkip] = useState(0);
   const [limit, setLimit] = useState(10);
 
-  const [open, setOpen] = useState(false);
-
   useEffect(() => {
     fetch(`http://localhost:8000/quote?skip=${skip}&limit=${limit}`)
       .then((response) => {
@@ -91,11 +89,12 @@ function App() {
 
   return (
     <div className="App">
+	<body>
       <img src={quotelogo} alt="" />
 
       <h1>Hack @ UCI Tech Deliverable</h1>
 
-      <h2>Submit a quote</h2>
+      <h2>Submit a quote!</h2>
       {/* TODO: implement custom form submission logic to not refresh the page */}
 	  
       <form action="/api/quote" method="post" onSubmit={handleSubmit}>
@@ -127,23 +126,19 @@ function App() {
       <div className="prevMessages">
         {quotes.length > 0 ? (
           quotes.map((quote, index) => (
-            <div key={index}>
-              <p>
-                {quote.name}: {quote.message} (submitted at {quote.time})
-              </p>
-            </div>
+            <div key={index} className="quote-container">
+				<p style={{ fontWeight: 'bold' }}>Quote by: {quote.name}</p>
+				<p>{quote.message}</p>
+				<p style={{ fontWeight: 'bold' }}>Submitted at: {quote.time}</p>
+			</div>
           ))
         ) : (
           <p>No more quotes.</p>
         )}
       </div>
-
-      {/* <div className="messages">
-				<p>Peter Anteater</p>
-				<p>Zot Zot Zot!</p>
-				<p>Every day</p>
-			</div> */}
+	</body>
     </div>
+	
   );
 }
 
