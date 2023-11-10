@@ -1,0 +1,70 @@
+/* App.css */
+.App {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.App img {
+  max-width: 100px;
+  margin: 0px auto;
+}
+
+.App h1 {
+  color: #333;
+}
+
+.App form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.App label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.App input[type="text"] {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.App button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.App button:hover {
+  background-color: #0056b3;
+}
+
+.App .prevMessages {
+  margin-top: 20px;
+}
+
+.App .prevMessages div {
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.App .prevMessages p {
+  margin: 0;
+  color: #555;
+}
+
+.quote-limit {
+  position: relative;
+  width: 10%; /* Adjust this as necessary */
+  padding: 10px; /* Optional for some spacing */
+  float: bottom;
+}
