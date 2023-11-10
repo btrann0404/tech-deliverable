@@ -89,56 +89,56 @@ function App() {
 
   return (
     <div className="App">
-	<body>
-      <img src={quotelogo} alt="" />
+      <body>
+        <img src={quotelogo} alt="" />
+        <div>
+          <h1>Hack @ UCI Tech Deliverable</h1>
 
-      <h1>Hack @ UCI Tech Deliverable</h1>
+          <h2>Submit a quote!</h2>
+          {/* TODO: implement custom form submission logic to not refresh the page */}
 
-      <h2>Submit a quote!</h2>
-      {/* TODO: implement custom form submission logic to not refresh the page */}
-	  
-      <form action="/api/quote" method="post" onSubmit={handleSubmit}>
-        <label htmlFor="input-name">Name</label>
-        <input type="text" name="name" id="input-name" required />
-        <label htmlFor="input-message">Quote</label>
-        <input type="text" name="message" id="input-message" required />
-        <button type="submit">Submit</button>
-      </form>
+          <form action="/api/quote" method="post" onSubmit={handleSubmit}>
+            <label htmlFor="input-name">Name</label>
+            <input type="text" name="name" id="input-name" required />
+            <label htmlFor="input-message">Quote</label>
+            <input type="text" name="message" id="input-message" required />
+            <button type="submit">Submit</button>
+          </form>
 
-      <h2>Previous Quotes</h2>
+          <h2>Previous Quotes</h2>
 
-      <div>
-        <button onClick={handlePrevious} disabled={skip === 0}>
-          Previous
-        </button>
-        <button onClick={handleNext}>Next</button>
-      </div>
+          <div>
+            <button onClick={handlePrevious} disabled={skip === 0}>
+              Previous
+            </button>
+            <button onClick={handleNext}>Next</button>
+          </div>
 
-      <input
-        type="text"
-        placeholder="Quote Limit"
-        className="quote-limit"
-        onChange={handleLimitChange}
-      />
+          <input
+            type="text"
+            placeholder="Number of Quotes"
+            className="quote-limit"
+            onChange={handleLimitChange}
+          />
+        </div>
 
-      {/* TODO: Display the actual quotes from the database */}
+        {/* TODO: Display the actual quotes from the database */}
 
-      <div className="prevMessages">
-        {quotes.length > 0 ? (
-          quotes.map((quote, index) => (
-            <div key={index} className="quote-container">
-				<p style={{ fontWeight: 'bold' }}>Quote by: {quote.name}</p>
-				<p>{quote.message}</p>
-				<p style={{ fontWeight: 'bold' }}>Submitted at: {quote.time}</p>
-			</div>
-          ))
-        ) : (
-          <p>No more quotes.</p>
-        )}
-      </div>
-	</body>
+        <div className="prevMessages">
+          {quotes.length > 0 ? (
+            quotes.map((quote, index) => (
+              <div key={index} className="quote-container">
+                <p style={{ fontWeight: "bold" }}>Quote by: {quote.name}</p>
+                <p> {quote.message} </p>
+                <p style={{ fontWeight: "bold" }}>Submitted at: {quote.time}</p>
+              </div>
+            ))
+          ) : (
+            <p>No more quotes.</p>
+          )}
+        </div>
+      </body>
     </div>
-	
   );
 }
 

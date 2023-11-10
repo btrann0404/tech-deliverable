@@ -1,54 +1,9 @@
 {
 	"quotes": [
 		{
-			"name": "Peter Anteater",
-			"message": "Zot Zot Zot!",
-			"time": "1965-11-30T13:52:09"
-		},
-		{
-			"name": "rieko",
-			"message": "Drink more water",
-			"time": "2021-02-21T22:34:59"
-		},
-		{
-			"name": "t\u00e6",
-			"message": "slay, girlboss",
-			"time": "2022-11-03T20:23:54"
-		},
-		{
-			"name": "pham",
-			"message": "i'm a resident gaslighter",
-			"time": "2023-01-25T17:58:31"
-		},
-		{
-			"name": "randy",
-			"message": "I love technology",
-			"time": "2023-02-15T16:46:22"
-		},
-		{
-			"name": "Jane Doe",
-			"message": "This quote is quite a bit longer than the other ones just to make things interesting. This shouldn't be too difficult to handle, but your design should be able to adapt to all sorts of edge cases. Will your application be able to handle this properly? Or will the text spill over atrociously or even get cut off? Also, how are you doing? I hope you're doing well. Have a Hack at UCI day!",
-			"time": "2023-03-02T11:48:17"
-		},
-		{
-			"name": "Josh Smith",
-			"message": "Testing testing, is this thing on?",
-			"time": "2023-03-02T11:51:06"
-		},
-		{
-			"name": "Ru",
-			"message": "no, don't slay me",
-			"time": "2023-03-03T20:06:23"
-		},
-		{
-			"name": "nate",
-			"message": "yes chef!",
-			"time": "2023-04-28T11:19:12"
-		},
-		{
-			"name": "Alan",
-			"message": "I want to get the chicken fried chicken. It\u2019s also vegan",
-			"time": "2023-08-11T19:01:06"
+			"name": "wiley",
+			"message": "There’s been lots of complications: as Sydnee would say, 'I hate it here'",
+			"time": "2023-09-22T22:00:00"
 		},
 		{
 			"name": "randy",
@@ -56,9 +11,54 @@
 			"time": "2023-08-18T15:15:13"
 		},
 		{
-			"name": "wiley",
-			"message": "There\u2019s been lots of complications: as Sydnee would say, \u201cI hate it here\u201d",
-			"time": "2023-09-22T22:00:00"
+			"name": "Alan",
+			"message": "I want to get the chicken fried chicken. It’s also vegan",
+			"time": "2023-08-11T19:01:06"
+		},
+		{
+			"name": "nate",
+			"message": "yes chef!",
+			"time": "2023-04-28T11:19:12"
+		},
+		{
+			"name": "Ru",
+			"message": "no, don't slay me",
+			"time": "2023-03-03T20:06:23"
+		},
+		{
+			"name": "Josh Smith",
+			"message": "Testing testing, is this thing on?",
+			"time": "2023-03-02T11:51:06"
+		},
+		{
+			"name": "Jane Doe",
+			"message": "This quote is quite a bit longer than the other ones just to make things interesting. This shouldn't be too difficult to handle, but your design should be able to adapt to all sorts of edge cases. Will your application be able to handle this properly? Or will the text spill over atrociously or even get cut off? Also, how are you doing? I hope you're doing well. Have a Hack at UCI day!",
+			"time": "2023-03-02T11:48:17"
+		},
+		{
+			"name": "randy",
+			"message": "I love technology",
+			"time": "2023-02-15T16:46:22"
+		},
+		{
+			"name": "pham",
+			"message": "i'm a resident gaslighter",
+			"time": "2023-01-25T17:58:31"
+		},
+		{
+			"name": "tæ",
+			"message": "slay, girlboss",
+			"time": "2022-11-03T20:23:54"
+		},
+		{
+			"name": "rieko",
+			"message": "Drink more water",
+			"time": "2021-02-21T22:34:59"
+		},
+		{
+			"name": "Peter Anteater",
+			"message": "Zot Zot Zot!",
+			"time": "1965-11-30T13:52:09"
 		}
-	]
+	]	
 }
