@@ -1,13 +1,14 @@
 /* App.css */
 .App {
   text-align: center;
-  font-family: "Monaco", sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .App img {
+
   max-width: 100px;
   margin: 0px auto;
-  padding: 10px;
+  padding: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -110,4 +111,24 @@ body {
   width: 10%;
   padding: 10px;
   float: bottom;
+}
+
+.navbar {
+    background-color: rgba(13, 12, 12, 0.643);
+    overflow: hidden;
+}
+
+/* Navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+    background-color: grey;
 }

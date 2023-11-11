@@ -90,8 +90,14 @@ function App() {
   return (
     <div className="App">
       <body>
-        <img src={quotelogo} alt="" />
+	  	<nav class="navbar">
+			<a href="#home">Home</a>
+			<a href="#news">News</a>
+			<a href="#contact">Contact</a>
+			<a href="#about">About</a>
+		</nav>
         <div>
+			<img src={quotelogo} alt="" />
           <h1>Hack @ UCI Tech Deliverable</h1>
 
           <h2>Submit a quote!</h2>
