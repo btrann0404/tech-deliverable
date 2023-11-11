@@ -118,7 +118,6 @@ body {
     overflow: hidden;
 }
 
-/* Navigation bar links */
 .navbar a {
     float: left;
     display: block;
@@ -128,7 +127,6 @@ body {
     text-decoration: none;
 }
 
-/* Change the color of links on hover */
 .navbar a:hover {
     background-color: grey;
 }
